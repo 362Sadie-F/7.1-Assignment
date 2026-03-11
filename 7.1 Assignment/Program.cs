@@ -12,7 +12,7 @@ namespace _7._1_Assignment
             int total = 0;
             int numbers;
             int input;
-            bool done = true;
+            
             Random generator = new Random();
 
             //Average 
@@ -28,16 +28,15 @@ namespace _7._1_Assignment
                 total += numbers;
                 count++;
             }
-            if (count == numbers);
-            {
-                done = true;
-            }
+            Console.WriteLine();
+            Console.WriteLine("Total is: " + total/numbers);
+            
 
             //Hi Low
 
 
 
-           // Console.WriteLine();
+            // Console.WriteLine();
         }
     }
 }
