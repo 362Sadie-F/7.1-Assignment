@@ -8,7 +8,7 @@ namespace _7._1_Assignment
         static void Main(string[] args)
         {
             int numValues;
-            int count = 0;
+            int count = 1;
             int total = 0;
             int numbers;
             int input;
