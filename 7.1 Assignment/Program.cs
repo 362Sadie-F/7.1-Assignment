@@ -20,7 +20,7 @@ namespace _7._1_Assignment
             Console.Write("How many numbers are you entering?: ");
             numbers = Convert.ToInt32(Console.ReadLine());
            
-            while (count < numbers)
+            while (count <= numbers)
             
             {
                 Console.WriteLine("Please enter a number.");
@@ -28,8 +28,13 @@ namespace _7._1_Assignment
                 total += numbers;
                 count++;
             }
+            if (count >= numbers)
+            {
+                Console.WriteLine("Total is: " + total/numbers);
+            }
+
             Console.WriteLine();
-            Console.WriteLine("Total is: " + total/numbers);
+            
             
 
             //Hi Low
