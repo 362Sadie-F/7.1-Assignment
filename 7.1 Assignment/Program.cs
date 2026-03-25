@@ -52,11 +52,15 @@ namespace _7._1_Assignment
                 }
                 else if (ranNum > guess)
                 {
-                    Console.WriteLine("Too Low");
+                    Console.WriteLine("Too Low, Press ENTER to try again");
+                    Console.ReadLine();
+                    Console.Clear();
                 }
                 else if (ranNum < guess)
                 {
-                    Console.WriteLine("Too High");
+                    Console.WriteLine("Too High, Press ENTER to try again");
+                    Console.ReadLine();
+                    Console.Clear();
                 }
             }
 
