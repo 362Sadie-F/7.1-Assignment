@@ -12,9 +12,10 @@ namespace _7._1_Assignment
             int total = 0;
             int numbers;
             int input;
-            
             Random generator = new Random();
-
+            int ranNum, guess= 0;
+            bool done = false;
+           
             //Average 
 
             Console.Write("How many numbers are you entering?: ");
@@ -30,18 +31,35 @@ namespace _7._1_Assignment
             }
             if (count >= numbers)
             {
-                Console.WriteLine("Total is: " + total/numbers);
+                Console.WriteLine("Total is: " + total / numbers);
             }
+             Console.WriteLine();
 
-            Console.WriteLine();
-            
-            
+
 
             //Hi Low
+            ranNum = generator.Next(101);
+            Console.WriteLine("I'm thinking of a number between 1 - 100, can you guess it?");
+            while (!done)
+            {
+                Console.WriteLine("Enter your guess: ");
+                while (!Int32.TryParse(Console.ReadLine(), out guess))
+                    Console.WriteLine("Please enter a valid guess");
+                if (ranNum == guess)
+                {
+                    Console.WriteLine("Great job!");
+                    done = true;
+                }
+                else if (ranNum > guess)
+                {
+                    Console.WriteLine("Too Low");
+                }
+                else if (ranNum < guess)
+                {
+                    Console.WriteLine("Too High");
+                }
+            }
 
-
-
-            // Console.WriteLine();
         }
     }
 }
